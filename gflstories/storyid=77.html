@@ -1,0 +1,146 @@
+  <html>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+    <meta charset="utf-8">
+
+    <title>GFL Stories</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="/ico/apple-touch-icon-57-precomposed.png">
+
+    <link href="/gflstories/css/semantic.min.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
+    <script src="/gflstories/js/semantic.min.js"></script>
+    <script src="/gflstories/js/main.js"></script>
+
+  </head>
+  <body>
+
+    <div class="ui container" id="main">
+      <br><a href="/gflstories">Back to all stories</a><br><br><center>      
+                  <object width="74%" height="500px" data="//www.youtube.com/v/g0Kzs28Y7_s" type="application/x-shockwave-flash"><param name="src" value="//www.youtube.com/v/g0Kzs28Y7_s" /></object>
+
+              </center>
+    <h2>Buckthorn</h2>
+    <h4>Joshua Palles</h4>
+    <hr>
+    <p>This video discusses Buckthorn as an invasive species, deer population and healthy forests.</p>
+    <div class="ui label">Francis W. Parker School | Chicago, IL</div>
+          <div class="ui horizontal divider">
+        0 Comments
+      </div>
+            <div id="commentDiv">
+      <form class="ui form" id="commentForm" action="scripts/submitComment.php" method="POST">
+        <h4 class="ui dividing header">Post a comment</h4>
+        <div class="field">
+          <label>First Name</label>
+          <div class="two fields">
+            <div class="field">
+              <input type="text" name="name" placeholder="First Name">
+            </div>
+          </div>
+          <div class="two fields">
+            <div class="field">
+              <label>School</label>
+              <select class="ui dropdown" name="school" id="school" onchange="ifOtherSchool()">
+                <option value="">Select your school</option>
+                <option>Celina High School | CTV, Celina, TX</option><option>Cooper City High School | Cooper City, Florida </option><option>Elizabeth Pinkerton Middle School | Elk Grove, California</option><option>Francis W. Parker School | Chicago, IL</option><option>Granite Hills HS | El Cajon, CA</option><option>Indianola HS | Indianola, IA</option><option>John V. Lindsay Wildcat School | New York, NY</option><option>Joint Educational Facilities, Inc. | Washington, DC USA</option><option>Lyceum n.61 | Russia, Ulan-Ude</option><option>Mount Everest Academy | San Diego, CA</option><option>Troy High School | Troy, Michigan</option><option>Вернадовский филиал МБОУ &quot;Пичаевская СОШ&quot; | с.Пичаево, Тамбовская обл., Пичаевский район</option><option>ГБОУ Лицей-интернат № 61 | г. Улан-Удэ, Республика Бурятия</option><option>ГБОУ СОШ № 1631 | г. Москва</option><option>ГБОУ Центр образования №1239 | Москва</option><option>ГБОУ Школа №1794 | г. Москва</option><option>МАОУ СОШ № 2 | город Реж, Свердловская область</option><option>МАУ ДО «Станция юных натуралистов» | г. Чайковский, Пермский край</option><option>МБОУ «СОШ с. Сосново» | с. Сосново, Пермский край</option><option>МБОУ г. Астрахань &quot;Лицей №2 им. В.В. Разуваева&quot;) | г. Астрахань</option><option>МБОУ Гимназия № 25 | г. Иркутск</option><option>МБОУ Курманаевская ООШ | с. Курманаево, Республика Татарстан</option><option>МБОУ Лицей № 11 | г. Челябинск</option><option>МБОУ Петровская СОШ № 1 | Омская область село Петровка</option><option>МБОУ СОШ № 55 | г. Астрахань</option><option>МБОУ СОШ п. Коминтерн | п. Коминтерн, Саратовская область</option><option>МБУДО Дом творчества «Успех» | г. Астрахань</option><option>МКОУ СОШ № 1 | Калужская область, г. Мосальск</option><option>МКОУ СОШ № 2 | г. Людиново, Калужская область</option><option>МОУ СОШ № 46 | г. Тверь</option>                <option value="other">Other (Specify)</option>
+              </select>
+            </div>
+          </div>
+          <div style="display: none;" id="other">
+          <label>Organization</label>
+          <div class="two fields">
+            <div class="field">
+              <input type="text" name="org" placeholder="Organization">
+            </div>
+          </div>
+          <label>Country</label>
+          <div class="two fields">
+            <div class="field">
+              <input type="text" name="country" placeholder="Country">
+            </div>
+          </div>
+          <label>City</label>
+          <div class="two fields">
+            <div class="field">
+              <input type="text" name="city" placeholder="City">
+            </div>
+          </div>
+        </div>
+        <input type="hidden" name="story" value="77">
+          <div class="field">
+            <label>Comment</label>
+            <textarea name="body" rows="2"></textarea>
+          </div>
+          <button class="ui button" id="submitButton" type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+    </div>
+  </body>
+  <script>
+  $('select.dropdown')
+  .dropdown()
+  ;
+  function ifOtherSchool()
+  {
+    //console.log(document.getElementById("school").value);
+    if (document.getElementById("school").value == "other")
+    {
+      $("#other").fadeIn();
+
+    }
+    else {
+      $("#other").hide();
+    }
+  }
+  $("#commentForm").submit(function(e)
+{
+    var postData = $(this).serializeArray();
+    var formURL = $(this).attr("action");
+    var valid = 0;
+    if ($('input[name=name]').val() != "" && $('select[name=school]').val() != "" && $('textarea[name=body]').val() != ""){
+      valid = 1;
+      if ($('select[name=school]').val() == "other"){
+        if ($('input[name=org]').val() != "" && $('input[name=country]').val() != "" && $('input[name=city]').val() != "")
+        valid = 1;
+        else
+        valid = 0;
+      }
+    }
+    if (valid == 1){
+    $.ajax(
+    {
+        url : formURL,
+        type: "POST",
+        data : postData,
+        beforeSend: function() {
+          $("#submitButton").prop("disabled",true);
+        },
+        success:function(data, textStatus, jqXHR)
+        {
+            //data: return data from server
+            //alert("submitted");
+            $("#commentDiv").html("Your comment has been submitted for approval.").hide().fadeIn();
+        },
+        error: function(jqXHR, textStatus, errorThrown)
+        {
+            $("#commentDiv").html("There was an error submitting your comment.").hide().fadeIn();
+        }
+    });
+  }
+  else{
+
+    alert("You must fill out all fields.")
+  }
+    e.preventDefault(); //STOP default action
+    //e.unbind(); //unbind. to stop multiple form submit.
+});
+  </script>

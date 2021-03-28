@@ -1,0 +1,146 @@
+  <html>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+    <meta charset="utf-8">
+
+    <title>GFL Stories</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="/ico/apple-touch-icon-57-precomposed.png">
+
+    <link href="/gflstories/css/semantic.min.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
+    <script src="/gflstories/js/semantic.min.js"></script>
+    <script src="/gflstories/js/main.js"></script>
+
+  </head>
+  <body>
+
+    <div class="ui container" id="main">
+      <br><a href="/gflstories/index2017.html">Back to all stories</a><br><br><center>
+                  <object width="74%" height="500px" data="//www.youtube.com/v/3pEPItJF1Jo" type="application/x-shockwave-flash"><param name="src" value="//www.youtube.com/v/3pEPItJF1Jo" /></object>
+
+              </center>
+    <h2>Mission Trails GFL - Matthew and Natasha</h2>
+    <h4>Natasha House,  Matthew  Zeko</h4>
+    <hr>
+    <p>We explored Mission Trails Regional Park in San Diego and found different wildlife and the Old Mission Dam. The forest health was decent, however due to the drought, there were a lot of trees down.</p>
+    <div class="ui label">Francis Parker School</div>
+          <div class="ui horizontal divider">
+        0 Comments
+      </div>
+            <div id="commentDiv">
+      <form class="ui form" id="commentForm" action="scripts/submitComment.php" method="POST">
+        <h4 class="ui dividing header">Post a comment</h4>
+        <div class="field">
+          <label>First Name</label>
+          <div class="two fields">
+            <div class="field">
+              <input type="text" name="name" placeholder="First Name">
+            </div>
+          </div>
+          <div class="two fields">
+            <div class="field">
+              <label>School</label>
+              <select class="ui dropdown" name="school" id="school" onchange="ifOtherSchool()">
+                <option value="">Select your school</option>
+                <option>Francis Parker School</option><option>GSN</option><option>ISM International Academy, Ecuador</option><option>Maryknoll Fathers' School</option><option>Moscow State School № 138</option><option>Mt. Everest Academy</option><option>Mt. Miguel High School</option><option>Preparatory school #14</option><option>Saugus High School</option><option>Victoria Academy</option><option>West Hills High School </option><option>Wunshan Senior High School </option><option>ГБОУ Лицей-интернат № 61</option><option>ГБОУ СОШ № 500</option><option>ГБОУ СОШ № 827</option><option>МАОУ СОШ № 11 </option><option>МАУ ДО Станция детского, юношеского туризма и экологии - Детское объединение друзья природы</option><option>МБОУ Гимназия № 25 </option><option>МБОУ Курманаевская ООШ</option><option>МБОУ Сокольская СОШ</option><option>МБОУ СОШ № 1</option><option>МБОУ СОШ № 10</option><option>МБОУ СОШ поселка Коминтерн</option><option>МБОУ СОШ села Сосново</option><option>МБОУ Тэгдинская СОШ</option><option>МБУ ДО ЛТ «Успех»</option><option>МКОУ Мосальская СОШ №1 </option><option>МКОУ Павловская СОШ № 2</option><option>МКОУ Порошинская СОШ</option><option>МОУ СОШ № 46  </option><option>Муниципальное казённое общеобразовательное учреждение  Средняя общеобразовательная школа № 2</option><option>Школьное лесничество «СОКОЛ»</option><option>Юношеский клуб космонавтики им. Г.С. Титова</option>                <option value="other">Other (Specify)</option>
+              </select>
+            </div>
+          </div>
+          <div style="display: none;" id="other">
+          <label>Organization</label>
+          <div class="two fields">
+            <div class="field">
+              <input type="text" name="org" placeholder="Organization">
+            </div>
+          </div>
+          <label>Country</label>
+          <div class="two fields">
+            <div class="field">
+              <input type="text" name="country" placeholder="Country">
+            </div>
+          </div>
+          <label>City</label>
+          <div class="two fields">
+            <div class="field">
+              <input type="text" name="city" placeholder="City">
+            </div>
+          </div>
+        </div>
+        <input type="hidden" name="story" value="103">
+          <div class="field">
+            <label>Comment</label>
+            <textarea name="body" rows="2"></textarea>
+          </div>
+          <button class="ui button" id="submitButton" type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+    </div>
+  </body>
+  <script>
+  $('select.dropdown')
+  .dropdown()
+  ;
+  function ifOtherSchool()
+  {
+    //console.log(document.getElementById("school").value);
+    if (document.getElementById("school").value == "other")
+    {
+      $("#other").fadeIn();
+
+    }
+    else {
+      $("#other").hide();
+    }
+  }
+  $("#commentForm").submit(function(e)
+{
+    var postData = $(this).serializeArray();
+    var formURL = $(this).attr("action");
+    var valid = 0;
+    if ($('input[name=name]').val() != "" && $('select[name=school]').val() != "" && $('textarea[name=body]').val() != ""){
+      valid = 1;
+      if ($('select[name=school]').val() == "other"){
+        if ($('input[name=org]').val() != "" && $('input[name=country]').val() != "" && $('input[name=city]').val() != "")
+        valid = 1;
+        else
+        valid = 0;
+      }
+    }
+    if (valid == 1){
+    $.ajax(
+    {
+        url : formURL,
+        type: "POST",
+        data : postData,
+        beforeSend: function() {
+          $("#submitButton").prop("disabled",true);
+        },
+        success:function(data, textStatus, jqXHR)
+        {
+            //data: return data from server
+            //alert("submitted");
+            $("#commentDiv").html("Your comment has been submitted for approval.").hide().fadeIn();
+        },
+        error: function(jqXHR, textStatus, errorThrown)
+        {
+            $("#commentDiv").html("There was an error submitting your comment.").hide().fadeIn();
+        }
+    });
+  }
+  else{
+
+    alert("You must fill out all fields.")
+  }
+    e.preventDefault(); //STOP default action
+    //e.unbind(); //unbind. to stop multiple form submit.
+});
+  </script>

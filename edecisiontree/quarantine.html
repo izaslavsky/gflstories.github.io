@@ -1,0 +1,85 @@
+<!DOCTYPE  html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>COVID-19-Decision-Tree</title><style type="text/css"> * {margin:0; padding:0; text-indent:0; }
+ h1 { color: #1C3857; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 26pt; }
+ .s1 { color: #FFF; font-family:"Lucida Sans", sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 11pt; }
+ .s2 { color: #231F20; font-family:"Arial Black", sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 9pt; }
+ .s3 { color: #231F20; font-family:Tahoma, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 9pt; }
+ .s4 { color: #3E5476; font-family:Tahoma, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 9pt; }
+ .s5 { color: #231F20; font-family:"Century Gothic", sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 7.5pt; }
+ h2 { color: #496496; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 14pt; }
+ .s6 { color: #496496; font-family:"Lucida Sans Unicode", sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 14pt; }
+ .s7 { color: #FFF; font-family:Tahoma, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 9.5pt; }
+ .s8 { color: #FFF; font-family:"Arial Black", sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 9pt; }
+ .s9 { color: #231F20; font-family:"Lucida Sans", sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 8pt; }
+ .s10 { color: #FFF; font-family:Tahoma, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 8pt; }
+ .s11 { color: #231F20; font-family:"Gill Sans MT", sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 8pt; }
+ .s12 { color: #231F20; font-family:"Gill Sans MT", sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 7pt; }
+ .s13 { color: #FFF; font-family:Tahoma, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 9pt; }
+ .s14 { color: #231F20; font-family:"Gill Sans MT", sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 8pt; vertical-align: 4pt; }
+ .s15 { color: #FFF; font-family:"Lucida Sans", sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 8pt; }
+ .s16 { color: #FFF; font-family:Verdana, sans-serif; font-style: italic; font-weight: bold; text-decoration: none; font-size: 9pt; }
+ .s17 { color: #FFF; font-family:"Arial Black", sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 9.5pt; }
+ .s18 { color: #231F20; font-family:"Lucida Sans", sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 9pt; }
+ .s19 { color: #231F20; font-family:"Gill Sans MT", sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 8pt; vertical-align: 1pt; }
+ .s20 { color: #FFF; font-family:"Arial Black", sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 8pt; }
+ .s22 { color: #231F20; font-family:Tahoma, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 11pt; }
+ .s23 { color: #231F20; font-family:"Arial Black", sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 11pt; }
+ .a { color: #205E9E; font-family:"Arial Black", sans-serif; font-style: normal; font-weight: normal; text-decoration: underline; font-size: 11pt; }
+ .s24 { color: #205E9E; font-family:"Arial Black", sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 11pt; }
+ .s25 { color: #205E9E; font-family:"Arial Black", sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 11pt; }
+ .s26 { color: #FFF; font-family:Tahoma, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 10pt; }
+ h3 { color: #FFF; font-family:Tahoma, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 13pt; }
+ h4 { color: #1C3857; font-family:Tahoma, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 11pt; }
+ .s27 { color: #231F20; font-family:Tahoma, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 10pt; }
+ .p, p { color: #231F20; font-family:"Arial Black", sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 10pt; margin:0pt; }
+ .s28 { color: #231F20; font-family:"Lucida Sans", sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 8.5pt; }
+ .s29 { color: #231F20; font-family:"Gill Sans MT", sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 8pt; vertical-align: 3pt; }
+ .s30 { color: #231F20; font-family:"Gill Sans MT", sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 8pt; vertical-align: -2pt; }
+ .s31 { color: #FFF; font-family:Tahoma, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 10pt; }
+ .s32 { color: #231F20; font-family:Verdana, sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 9pt; }
+ .s33 { color: #231F20; font-family:Verdana, sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 8pt; }
+ .s34 { color: #FFF; font-family:Tahoma, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 9pt; }
+ .s35 { color: #205E9E; font-family:Verdana, sans-serif; font-style: normal; font-weight: normal; text-decoration: underline; font-size: 8pt; }
+ li {display: block; }
+ #l1 {padding-left: 0pt; }
+ #l1> li>*:first-child:before {content: "• "; color: #231F20; font-family:Tahoma, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 9pt; vertical-align: -1pt; }
+ li {display: block; }
+ #l2 {padding-left: 0pt;counter-reset: d1 1; }
+ #l2> li>*:first-child:before {counter-increment: d1; content: counter(d1, decimal)". "; color: #FFF; font-family:"Lucida Sans", sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 8pt; }
+ #l2> li:first-child>*:first-child:before {counter-increment: d1 0;  }
+ li {display: block; }
+ #l3 {padding-left: 0pt; }
+ #l3> li>*:first-child:before {content: "• "; color: #FFF; font-family:"Lucida Sans", sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 8pt; }
+ #l4 {padding-left: 0pt; }
+ #l4> li>*:first-child:before {content: "• "; color: #FFF; font-family:"Arial Black", sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 9pt; }
+ #l5 {padding-left: 0pt; }
+ #l5> li>*:first-child:before {content: "• "; color: #231F20; font-family:Tahoma, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 10pt; }
+ li {display: block; }
+ #l6 {padding-left: 0pt; }
+ #l6> li>*:first-child:before {content: "• "; color: #231F20; font-family:"Arial Black", sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 10pt; }
+ li {display: block; }
+ #l7 {padding-left: 0pt; }
+ #l7> li>*:first-child:before {content: "• "; color: #FFF; font-family:"Arial Black", sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 8pt; }
+ li {display: block; }
+ #l8 {padding-left: 0pt; }
+ #l8> li>*:first-child:before {content: "• "; color: #FFF; font-family:"Arial Black", sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 8pt; }
+ li {display: block; }
+ #l9 {padding-left: 0pt; }
+ #l9> li>*:first-child:before {content: "• "; color: #231F20; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 10pt; }
+ li {display: block; }
+ #l10 {padding-left: 0pt; }
+ #l10> li>*:first-child:before {content: "• "; color: #231F20; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 10pt; }
+ li {display: block; }
+ #l11 {padding-left: 0pt; }
+ #l11> li>*:first-child:before {content: "• "; color: #231F20; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 10pt; }
+ li {display: block; }
+ #l12 {padding-left: 0pt; }
+ #l12> li>*:first-child:before {content: "• "; color: #231F20; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 10pt; }
+ li {display: block; }
+ #l13 {padding-left: 0pt; }
+ #l13> li>*:first-child:before {content: "• "; color: #231F20; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 10pt; }
+ table, tbody {vertical-align: top; overflow: visible; }
+</style></head><body>
+
+<h3 style="padding-top: 6pt;padding-left: 86pt;text-indent: -24pt;line-height: 108%;text-align: left;">If the student cannot or will not follow the requirements listed above, quarantine for 10 days (return Day 11) is required.</h3><p style="text-indent: 0pt;text-align: left;"><br/></p><h4 style="padding-left: 58pt;text-indent: 0pt;text-align: left;">Quarantine Requirements</h4><ul id="l5"><li><p class="s27" style="padding-top: 2pt;padding-left: 85pt;text-indent: -13pt;line-height: 92%;text-align: left;">Modified (in-school) Quarantine: <span class="p">This option may only be used by student close contacts exposed in a setting supervised by school staff, when the COVID-19- positive person and student close contact were both wearing masks during all contacts with each other within 6 feet. To remain in school the student must test within 24 hours of notification, and on day 5, 6, or 7. Rapid result (antigen) testing is recommended. The student may continue to participate in expanded learning or child care programs offered on the school campus, but must quarantine</span></p><p style="padding-left: 85pt;text-indent: 0pt;line-height: 92%;text-align: left;">at home from all other before-school, after-school, and weekend activities. Activities may resume on or after Day 8 with evidence of a negative test sample collected on or after Day 5. (See FAQ answer No. 7).</p></li><li><p class="s27" style="padding-top: 2pt;padding-left: 85pt;text-indent: -13pt;line-height: 92%;text-align: left;">Return on Day 8: <span class="p">It is recommended that the student close contact test ASAP. Return as early as Day 8 is authorized with evidence that a diagnostic specimen collected on or after Day 5 is negative.</span></p></li><li><p class="s27" style="padding-top: 2pt;padding-left: 85pt;text-indent: -13pt;line-height: 92%;text-align: left;">Return on Day 11: <span class="p">Allows a student to return on Day 11. Testing is recommended on Day 5, 6, or 7, but not required.</span></p></li><li><p class="s27" style="padding-top: 2pt;padding-left: 85pt;text-indent: -13pt;line-height: 92%;text-align: left;">If symptoms develop or a positive test result occurs <span class="p">during quarantine, require isolation at home and consult the Symptom and Isolation or Asymptomatic Positive tree.</span></p></li></ul></li></ul><h4 style="padding-top: 6pt;padding-left: 58pt;text-indent: 0pt;text-align: left;">Additional Requirements for Return Before Day 11</h4><ul id="l6"><li><p style="padding-top: 4pt;padding-left: 85pt;text-indent: -13pt;line-height: 92%;text-align: justify;">Students must agree to self-monitor for symptoms, wear a face covering over their nose and mouth as required, use good hand hygiene practices, and use good cough and sneeze etiquette.</p></li><li><p style="padding-top: 2pt;padding-left: 85pt;text-indent: -13pt;line-height: 92%;text-align: left;">Accommodations (like changes in the close contact’s work, room, seat, or bus assignments) should be made to ensure that close contacts returning before Day 11 will not be near others who are immunocompromised (i.e, solid organ or bone marrow transplant, chemotherapy, similarly reduced ability to fight infections). If these accommodations cannot be made the close contact must quarantine for 10 days.</p><h4 style="padding-top: 6pt;padding-left: 58pt;text-indent: 0pt;text-align: left;">Other Notes on Quarantine</h4></li><li><p style="padding-top: 2pt;padding-left: 85pt;text-indent: -13pt;line-height: 92%;text-align: left;">The number of days required for quarantine is counted from the day after the person’s last close contact with a person who is contagious with COVID-19. Please see FAQ No. 1 under “isolation” for information on how long people are considered to be contagious.</p></li></ul><p style="text-indent: 0pt;text-align: left;">
+  </body></html>

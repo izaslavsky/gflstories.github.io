@@ -1,0 +1,133 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml">
+<head>
+<style>v\:* { behavior: url(#default#VML); }
+.title {left:0;top:0;text-align:center;color:#ffffff;font-weight:bold;font-size:16pt}
+.simple {left:0;top:0;text-align:center;color:#ffffff;font-weight:bold;font-size:12pt}
+
+</style>
+<title>AxioMap Color Selector</title>
+<script>
+var sel_elem_id;
+var sel_elem=null;
+var cols="ffffff,ffcccc,ffcc99,ffffcc,99ff99,ccffff,ffccff,"
++"cccccc,ff6666,ffcc33,ffff99,66ff99,66ffff,ff99ff,"
++"c0c0c0,ff0000,ff9900,ffff00,33ff33,33ccff,cc66cc,"
++"999999,cc0000,ff6600,ffcc00,00cc00,3366ff,cc33cc,"
++"666666,990000,cc6600,999900,009900,3333ff,993366,"
++"333333,660000,993300,666600,006600,000099,663366,"
++"000000,330000,663300,333300,003300,000066,330033";
+var colors=new Array(1);
+var m = new Array(1);						
+
+function doInit()
+{
+  var messDoc = new ActiveXObject("microsoft.XMLDOM");
+  messDoc.validateOnParse = false;
+  messDoc.async=false;
+  if (messDoc.load("messa.xml")==false)
+  {
+  	alert("Error loading messages file."+c+"Your browser may not be set up for opening XML files." +c+c+"Contact your system administrator.");
+  	top.close();
+  	return false
+  }
+  else
+  {
+	var root = messDoc.documentElement;
+  var listNodes = root.getElementsByTagName("m");
+	for (i=0;i<listNodes.length; i++)	m[i] = listNodes(i).text;
+  	window.status = "";
+  	init_con()
+  }
+}
+function init_con() 
+{
+	colors=cols.split(",");
+  fullstring='';
+  numeric = 1;
+  for(i=0;i<7;i++) {
+  	for(j=0;j<7;j++) {
+  	fullstring+="<v:rect title=\"#"+colors[7*i+j]+"\" id=\""+colors[7*i+j]+"\" style=\"position:absolute;left:"+(340*i)+";top:"+(170*j)+";width=280;height=150;cursor:hand\" fillcolor=\"#"+colors[7*i+j]+"\" strokeweight=\"1\"><\/v:rect>";
+  	numeric++
+  	}
+  }
+	s2w ='<CENTER><table border="2" rules="none" bgcolor="#7098A0" cellpadding="2" cellspacing="5" width="520" height="420">';
+	s2w+='<tr><td valign="middle" align="center" height="10%" colspan="5" class=title>'+m[25]+'<hr><\/td><\/tr>';
+	s2w+='<tr><td valign="top" align="center" height="80%" colspan="5">';
+	s2w+='<v:group onclick="selpat()" onmouseover="mover()" onmouseout="mout()" style="position:relative;left:0pt;top:0pt; width:500pt;height:316pt" coordorigin="0,0" coordsize="3840,2400">';
+	s2w+= fullstring;
+	s2w+='<\/v:group>';
+	s2w+='<hr><table border=0><tr><td class=simple>'+m[24]+'<input type="text" name="thiscolor" value="" maxlength="7" size="7" onkeypress="enterhandle()"><\/td><\/tr><\/table>';
+	s2w+='<hr><\/td><\/tr>';
+	s2w+='<tr><td><\/td>';
+	s2w+='<td valign="middle" align="center"><BUTTON onclick="doOK()">'+m[3]+'<\/BUTTON><\/td>';
+	s2w+='<td valign="middle" align="center">';
+	s2w+='<v:rect id=selectedcolor_box style="width:100pt;height:50pt" fillcolor="#ffffff"><\/v:rect><\/td>';
+	s2w+='<td valign="middle" align="center"><BUTTON onclick="doCancel()">'+m[1]+'<\/BUTTON><\/td>';
+	s2w+='<td><\/td><\/tr><\/table><\/CENTER>';
+	all.innerHTML=s2w
+}
+
+function doOK() 
+{
+	if ((thiscolor.value != null) && (thiscolor.value !=''))
+	{
+		window.returnValue = thiscolor.value
+	}
+	else
+	{
+		window.returnValue = ''
+	}
+	window.close()
+}
+function doCancel() 
+{
+	window.returnValue = '';
+	window.close()
+}
+function mover() 
+{
+ 	cur_elem = event.srcElement;
+  if (cur_elem != sel_elem) 
+  {
+  	cur_elem.strokeweight=2;
+  	cur_elem.strokecolor="yellow"
+  }
+}
+function mout() 
+{
+  cur_elem = event.srcElement;
+  if (cur_elem != sel_elem) 
+  {
+  	cur_elem.strokeweight=1;
+  	cur_elem.strokecolor="black"
+  }	
+}
+function selpat() 
+{
+  if(sel_elem) 
+  {
+  	old_sel_elem = document.getElementById(sel_elem_id);
+  	old_sel_elem.strokeweight=1;
+  	old_sel_elem.strokecolor="black"
+  }
+  sel_elem = event.srcElement;
+  sel_elem_id = sel_elem.id;
+ 	sel_elem.strokeweight=3;
+  sel_elem.strokecolor="red";
+  thiscolor.value="#"+cur_elem.id;
+	coll = thiscolor.value;
+	selectedcolor_box.fillcolor=coll
+}
+function enterhandle(e) 
+{
+  if(event.keyCode == 13) 
+  {
+		event.returnValue = false;
+		coll = thiscolor.value;
+		selectedcolor_box.fillcolor=coll;
+    return false
+  }
+}
+</SCRIPT></HEAD>
+<BODY onload="doInit()"  bgcolor="#7098A0"><div id=all></div>
+</BODY></HTML>

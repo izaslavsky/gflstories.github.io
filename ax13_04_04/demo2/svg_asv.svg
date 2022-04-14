@@ -1,0 +1,147 @@
+<?xml version="1.0"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20001102//EN"  "http://www.w3.org/TR/2000/CR-SVG-20001102/DTD/svg-20001102.dtd" [
+<!ENTITY base "fill:#FFFF99;stroke:#000000;stroke-width:1;">
+<!ENTITY tooltip "fill:black;font-size:9pt;">
+
+]>
+<svg id="axiomap" preserveAspectRatio="xMinYMin" style="shape-rendering:geometricPrecision; text-rendering:optimizeLegibility" onload="initMap(evt)" onmousemove="GetElementAndPosition(evt)" onmousedown="set_menu()" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" a:scriptImplementation="Adobe">
+<rect id="karta_canvas" fill="white" stroke-width="0" x="0" y="0" width="100%" height="100%"/>
+
+<script type="text/javascript" xlink:href="../axiom/globals.js" a:scriptImplementation="Adobe"/>
+<script type="text/javascript" xlink:href="../axiom/init_project.js" a:scriptImplementation="Adobe"/>
+<script type="text/javascript" xlink:href="../axiom/layout_navigat.js" a:scriptImplementation="Adobe"/>
+<script type="text/javascript" xlink:href="../axiom/selbox.js" a:scriptImplementation="Adobe"/>
+<script type="text/javascript" xlink:href="../axiom/thematic.js" a:scriptImplementation="Adobe"/>
+<script type="text/javascript" xlink:href="../axiom/hiermenu.js" a:scriptImplementation="Adobe"/>
+<script type="text/javascript" xlink:href="../axiom/lt_insert.js" a:scriptImplementation="Adobe"/>
+<script xlink:href="../axiom/vertmy.js"/>
+
+<script><![CDATA[
+
+var newMenuRoot = parseXML(printNode(document.getElementById('MENU')),contextMenu);
+contextMenu.replaceChild( newMenuRoot, contextMenu.firstChild );
+
+
+]]></script>	
+
+<desc></desc>
+
+<defs>
+<menu id="MENU" xmlns="http://foo">
+<header>Custom Menu</header>
+<item action='ZoomIn'>Zoom &amp;In</item>
+<item action='ZoomOut'>Zoom &amp;Out</item>
+<item action='OriginalView'>&amp;Original View</item>
+<item />
+<!--
+<item xmlns="http://www.w3.org/1999/xlink" xlink:href="http://www.yahoo.com" target="resource window">My &amp;Link</item>
+-->
+<item id="myfunc" onactivate="init_lt()">&amp;Init Lt</item>
+<item id="myfunc" onactivate="MyFunction(evt)">&amp;My Function</item>
+<item id="pointdata" onactivate="pointData()">Point &amp;Data</item>
+<item id="labelit" onactivate="MyLabel()">&amp;Label it!</item>
+<item xmlns="http://www.w3.org/1999/xlink" xlink:href="moremeta.htm" target="resource window">Meta&amp;data...</item>
+<item />
+<item action='Quality'>Higher &amp;Quality</item>
+<item action='Pause'>&amp;Pause</item>
+<item action='Mute'>&amp;Mute</item>
+<item />
+<item action='Find'>&amp;Find...</item>
+<item action='FindAgain'>Find &amp;Again</item>
+<!--
+-->
+<item />
+<item action='CopySVG'>&amp;Copy SVG</item>
+<item action='ViewSVG'>&amp;View SVG...</item>
+<item action='ViewSource'>View Sourc&amp;e...</item>
+<item action='SaveAs'>&amp;Save SVG As...</item>
+<item action='SaveSnapshotAs'>Sa&amp;ve Current State...</item>
+<!--
+-->
+<item />
+<item xmlns="http://www.w3.org/1999/xlink" xlink:href="../axiom/help.htm" target="resource window">A&amp;xiomap Help...</item>
+<item action='Help'>SVG &amp;Help...</item>
+<item action='About'>About SVG Viewer...</item>
+</menu>
+</defs>
+
+
+<g id="karta" style="stroke-linejoin:round;stroke-linecap:round">
+
+<g id="br"/>
+
+
+<g id="base"/>
+
+<g id="fr"/>
+<g id="reg"/>
+
+<g id="fl"/>
+<g id="lin"/>
+
+<g id="fp"/>
+<g id="poi"/>
+<g id="cosmetic"/>
+
+<g id="tooltips"  style="shape-rendering:optimizeSpeed">
+<g id="tool1" style="visibility:hidden"> 
+<rect id="nomrect" style="fill:white;stroke:blue;stroke-width:1"/>
+<text id="nom" style="text-anchor:middle;font-size:200;font-family:Times Roman;fill:black">?</text>
+</g>
+<g id="tool2" style="visibility:hidden"> 
+<rect id="nom2rect" style="fill:white;stroke:blue;stroke-width:0"/>
+<text id="nom2"  style="text-anchor:left;font-size:80;font-family:Times Roman;fill:black">?</text>
+</g>
+</g>
+
+</g>
+
+
+<g id="stables" style="shape-rendering:optimizeSpeed">
+	<g id="map_title" style="visibility:visible">
+		<rect id="title_background" fill="#6A93B3" width="100%" height="40" stroke="blue" stroke-width="3"/> 
+		<text id="map_title_text" font-size="24" x="350" y="30">Map Title</text>
+	</g>
+	<g id="navi_group">
+	<g id="navi" style="visibility:visible" y="0">
+		<rect id="navi_rect" fill="#6A93B3" width="200" height="100%" stroke="blue" stroke-width="3"/> 
+		<text id="help_txt" font-size="10" style="fill:yellow">
+		<tspan>CTRL-Click to zoom in</tspan>
+		<tspan x="10" dy="1em">CTRL-SHIFT-Click to zoom out</tspan>
+		<tspan x="10" dy="1em">ALT-Click to pan</tspan>
+		<tspan x="10" dy="1em">Right-click for menu</tspan>
+		</text>
+<!--
+		<text id="cprt" font-size="12" style="fill:white">
+		<a href="http://www.elzaresearch.com/landv/"><tspan>AxioMap 1.3  (C)LandV, 2002</tspan></a></text>
+-->
+		<rect id="hier_rect" fill="#6A93CC" width="200" height="100%" stroke="white" stroke-width="0"/>
+		<g id="lt_insert"></g> 
+		<g id="hier_menu"></g>
+		<g id="navi_buttons"></g><g id="options_dialog"></g><g id="query_dialog"></g><g id="compose_dialog"></g>
+		<g id="selboxes"></g>
+	</g>
+	</g>
+
+	<g id="location">
+		<rect id="info_rect" style="fill:#EEEEEE;stroke:#4444EE;stroke-width:2;" height="1000" width="3000" ry="100" rx="100" y="6547" x="8590"/>
+		<text id="info_txt" style="visibility:hidden;text-anchor:middle;font-size:200;font-family:Times Roman;fill:black">?</text>
+	</g>
+	<g id="legend" style="visibility:hidden" onmousemove="LegMouseMove(evt)" onmouseup="LegMouseUp(evt)" onmousedown="LegMouseDown(evt)" onmouseover="LegMouseOver(evt)" onmouseout="LegMouseOut(evt)" >
+	<rect id="leg_rect" style="fill:#EEEEEE;stroke:#4444EE;stroke-width:2;" ry="15" rx="15" y="0" x="0"/>
+	</g>	
+</g>
+
+<g id="extras"></g>
+<script> 
+
+<!--
+document.getElementById("karta_canvas").addEventListener('mousedown', set_menu, false);
+-->
+document.rootElement.addEventListener( "SVGScroll", syncStables, false ) 
+document.rootElement.addEventListener( "SVGResize", syncStables_resize, false ) 
+document.rootElement.addEventListener( "SVGZoom", syncStables, false ) 
+syncStables() 
+</script> 
+</svg> 
+

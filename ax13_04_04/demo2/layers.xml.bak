@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<project><globals>
+<inicoor><x>9988</x><y>6476</y></inicoor>
+<shift><x>-90408</x><y>41697</y></shift>
+<factor>1000</factor>
+<disp><wid>650</wid><hei>527</hei><left>0</left><top>55</top></disp>
+<leg><left>10</left><wid>40</wid><hei>5</hei><textoffset>3</textoffset>
+<vertpad>18</vertpad><boxwid>240</boxwid></leg>
+<header><txt>Michigan Atlas</txt><flag>0</flag><icon></icon><exi>main.htm</exi></header>
+<annot>Data sources. Agriculture: 1992 Agriculture Census, dataset assembled by Kathleen Baker, Michigan State University. Primaries: ABC News Web site, 2/22/2000. Other: US Census Bureau.</annot>
+<visib><leg>1</leg><anno>1</anno><labl>1</labl><speak>1</speak><opac>0.6</opac></visib>
+<proj><typ>GEO</typ><zon>11</zon></proj>
+<opts><numint>5</numint><method>1</method></opts>
+<colorlist>#FFFF99,#FFFF33,#FFCC33,#FF9900,#FF6600,#FF3300,#CC3300,#990000,#660000</colorlist>
+<clrs>6A93B3,6699ff,000080,ffffff,0000ff,ffffff,7098A0,ffffff,0000ff,ffffff,000080,FFFFFF,FFFFFF,FFFFCC,CD5C5C,6A93B3,8F8FBD,FF1CAE,ffff00,ffff00,0000FF,ffffff,FFC,000080,800000,ffff00,ffff00,ccffcc,ffffcc,ffffff,,000000</clrs>
+</globals>
+<l lt="base"><s>a</s><n>83</n><rend>#a16632,1,0,#FFFF99,1</rend>
+<v><name>Agriculture</name><s>b3</s></v>
+<v><name>Republican Primary 2/22</name><s>b0</s></v>
+<v><name>Census Demography</name><s>b1</s></v>
+<v><name>Census Households</name><s>b2</s></v>
+</l>
+<l lt="forep"><s>p3</s><id>0</id><rend>oval,3,red,green,3</rend></l>
+<l lt="forep"><s>p4</s><id>1</id><rend>ncdc.gif,2</rend></l>
+<l lt="forel"><s>l1</s><id>0</id><rend>#FF0000,3</rend></l>
+
+<l lt="line"><s>l0</s><id>0</id><name>Streams</name><rend>#0099FF,1</rend></l>
+<l lt="point"><s>p0</s><id>0</id><name>Cities 10-50K</name><rend>rect,-10,black,green,2</rend></l>
+<l lt="point"><s>p1</s><id>1</id><name>Cities 50-100K</name><rend>oval,-2,blue,maroon,1</rend></l>
+<l lt="point"><s>p2</s><id>2</id><name>Cities 100K - 1 mil</name><rend>rect,0,green,red,2</rend></l>
+<l lt="point"><s>p5</s><id>3</id><name>Potato Stations</name><rend>potato.gif,2</rend></l>
+<l lt="point"><s>p6</s><id>4</id><name>Weather Stations</name><rend>agweather.gif,1</rend></l>
+<g gt="point"><name>Weather Stations</name>
+<ids>3,4</ids></g>
+<g gt="point"><name>Cities</name>
+<ids>2,1,0</ids></g>
+<g gt="line"><name>Streams, Ecoregions</name>
+<ids>0</ids></g>
+</project>

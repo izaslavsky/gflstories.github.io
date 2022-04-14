@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<ps><titles>Location|Url2|County</titles>
+<p><name>Centreville</name><c>4891,245</c><URL>http://www.agweather.geo.msu.edu/Automated-Data/centrevl.hourly</URL><v>Centreville|http://www.agweather.geo.msu.edu/Automated-Data/centrevl.hourly|Centreville</v></p>
+<p><name>Athens</name><c>5262,478</c><URL>http://www.agweather.geo.msu.edu/Automated-Data/athens.hourly</URL><v>Athens|http://www.agweather.geo.msu.edu/Automated-Data/athens.hourly|Athens</v></p>
+<p><name>Marshall</name><c>5460,578</c><URL>http://www.agweather.geo.msu.edu/Automated-Data/marshall.hourly</URL><v>Marshall|http://www.agweather.geo.msu.edu/Automated-Data/marshall.hourly|Marshall</v></p>
+<p><name>Schoolcraft</name><c>4820,474</c><URL>http://www.agweather.geo.msu.edu/Automated-Data/schoolcr.hourly</URL><v>Schoolcraft|http://www.agweather.geo.msu.edu/Automated-Data/schoolcr.hourly|Schoolcraft</v></p>
+<p><name>Sparta</name><c>4891,1395</c><URL>http://www.agweather.geo.msu.edu/Automated-Data/sparta.hourly</URL><v>Sparta|http://www.agweather.geo.msu.edu/Automated-Data/sparta.hourly|Sparta</v></p>
+<p><name>East Lansing</name><c>5924,974</c><URL>http://www.agweather.geo.msu.edu/Automated-Data/msuhor.hourly</URL><v>East Lansing|http://www.agweather.geo.msu.edu/Automated-Data/msuhor.hourly|East Lansing</v></p>
+<p><name>Entrican</name><c>5314,1629</c><URL>http://www.agweather.geo.msu.edu/Automated-Data/montcalm.hourly</URL><v>Entrican|http://www.agweather.geo.msu.edu/Automated-Data/montcalm.hourly|Entrican</v></p>
+<p><name>Fennville</name><c>4566,931</c><URL>http://www.agweather.geo.msu.edu/Automated-Data/fennvill.hourly</URL><v>Fennville|http://www.agweather.geo.msu.edu/Automated-Data/fennvill.hourly|Fennville</v></p>
+<p><name>Hart</name><c>4111,1943</c><URL>http://www.agweather.geo.msu.edu/Automated-Data/hart.hourly</URL><v>Hart|http://www.agweather.geo.msu.edu/Automated-Data/hart.hourly|Hart</v></p>
+<p><name>Pigeon</name><c>7399,2215</c><URL>http://www.agweather.geo.msu.edu/Automated-Data/pigeon.hourly</URL><v>Pigeon|http://www.agweather.geo.msu.edu/Automated-Data/pigeon.hourly|Pigeon</v></p>
+<p><name>Saginaw</name><c>6418,1664</c><URL>http://www.agweather.geo.msu.edu/Automated-Data/sagvally.hourly</URL><v>Saginaw|http://www.agweather.geo.msu.edu/Automated-Data/sagvally.hourly|Saginaw</v></p></ps>

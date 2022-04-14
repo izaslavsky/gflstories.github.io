@@ -1,0 +1,132 @@
+<html>
+<head>
+<title>Axiomap Version Selector</title>
+<script type="text/javascript" language="JavaScript" src="../axiom/svgcheck.js">
+</script>
+<script type="text/vbscript" language="VBScript" src="../axiom/svgcheck.vbs">
+</script>
+<script type="text/javascript">
+checkAndGetSVGViewer();
+var svgVersion;
+var svgName;
+var svgLoaded=false;
+stat=''
+
+function checkSVGloaded() 
+{
+	if(svgLoaded) {
+		checkSVGversion()
+	}
+	else
+	{
+		setTimeout("checkSVGloaded()",100)
+		stat+=".."
+		window.status=stat
+	}
+}
+
+function do_svg() 
+{
+	if(window.svgInstalled) {
+		checkSVGloaded()	
+	}
+	if(window.askForSVGViewer) {
+		getSVGViewer();
+	}
+	firstSVG=false;
+}
+
+function checkSVGversion() 
+{
+	if((svgVersion < 3)||(svgName!="Adobe SVG Viewer")) 
+	{
+		if(confirm('You have a previous version of the viewer. Download Adobe SVG Viewer 3.0 now?'))  location=getSVGInstallPage();
+	}
+	else
+	{
+		location = "svg_asv.svg"
+	}
+}
+
+</script>
+</head>
+<body bgcolor="#000000"  TEXT="#FFFFFF" LINK="#FF0000" VLINK="#FF9900" ALINK="#FF0000">
+<h1 align="center"><font color="#FFFF00">Welcome to AxioMap</font></h1>
+<h1 align="center"><font color="#FF0000"><u>A</u></font><u><font color="#99FF99">pplication of <font color="#FF0000">X</font>ML for <font color="#FF0000">I</font>nteractive <font color="#FF0000">O</font>nline <font color="#FF0000">Map</font>ping </font></u></h1>
+<h2 align="center"><font color="#FFFFFF">AxioMap uses XML-based vector graphics 
+  <br> to draw interactive maps in your browser. </font></h2>
+<h2 align="center"><i><font color="#FFFFFF">Depending on your browser setup, you may be able to view maps using one or two different vector rendering technologies (VML or SVG)</font></i></h2>
+
+<script language="JavaScript"><!--
+ emitSVG('src="../axiom/svg_test.svg" name="test" height="5" width="100%" type="image/svg-xml"');
+// -->
+</script>
+
+<noscript>
+<embed src="../axiom/svg_test.svg" name="test" height="5" width="100%" type="image/svg-xml" pluginspage="http://www.adobe.com/svg/viewer/install/">
+</noscript>
+
+
+<script language="JavaScript">
+
+if(is_win32 && is_ie5up) {
+	brow = "Microsoft Internet Explorer 5 or higher on a Windows platform. ";
+	brow2 = "This browser supports Vector Markup Language (you must have VML support installed)";
+	document.writeln('<h2 align="center"><font color="#FFFFFF">You are using </font><font color="#FF0033" face="Arial, Helvetica, sans-serif">'+brow+'</font>')
+	document.writeln('<br><font size="-1" color="#FFFFFF">'+brow2+'</font></h2>')
+	document.writeln('<h2 align="center"><font color="#FFFF33"><i>So, you have two options...</i></font></h2>')
+	document.writeln('<div align="center"><table width="75%" border="1" cellspacing="0" cellpadding="10" align="center">')
+	document.writeln('<tr><td><div align="center"><font size="+1" color="#66CCFF">Click below if you want to see the maps using Vector Markup Language (VML)<br>implemented in MS Internet Explorer 5+ <br> (no plug-ins required)</font></div>')
+	document.writeln('</td><td>')
+	document.writeln('<div align="center"><font size="+1" color="#66CCFF">Click below if you want to see the maps using Scalable Vector Graphics (SVG)<br>(if you do not have an Adobe SVG plug-in, you will be prompted to install it)</font></div>')
+	document.writeln('</td></tr>')
+	document.writeln('<tr><td><a href="main2.htm"><h1 align="center"><font color="#CCFF33">VML</font></h1></a></td>')
+	document.writeln('<td><a href="javascript:do_svg()"><h1 align="center"><font color="#99FF33">SVG</font></h1></a></td></tr></table></div>')
+}else{
+	brow =" a browser that does not support VML. You may need to use Adobe SVG Plug-in 3.0, if it is supported by your browser";
+	document.writeln('<h2 align="center"><font color="#FFFFFF">You are using </font><font color="#FF0033" face="Arial, Helvetica, sans-serif">'+brow+'</font></h2>')
+
+	if(window.svgInstalled) 
+	{
+		
+		location = "svg_asv.svg"
+//		checkSVGloaded()
+//		if((svgVersion < 3)||(svgName!="Adobe SVG Viewer")) 
+//		{
+//			if(confirm('You have a previous version of the viewer. Download Adobe SVG Viewer 3.0 now?'))  location=getSVGInstallPage();
+//		}
+//		else
+//		{
+//			location = "svg_asv.svg"
+//		}
+	}
+	else
+	{
+		if (window.svgViewerAvailable) {
+		
+			document.writeln('<p align="center"><a href="http://www.adobe.com/svg/viewer/install/auto"><img src="../axiom/svgdownload.gif"></a></p>')
+			document.writeln('<font color="#FFFFFF"><p align="center">After you install Adobe SVG Plug-in 3.0  please restart your browser</p></font>')
+			document.writeln('<font color="#FFFFFF"><p align="center"><a href="http://www.adobe.com/svg/viewer/install/auto">Click here</a> for more information.</p></font>');
+		}
+		else
+		{
+			document.writeln('<font color="#FFFFFF"><p align="center">It appears that your browser is not officially supported by Adobe SVG Plug-in.</p></font>')
+			document.writeln('<font color="#FFFFFF"><p align="center">You still may be able to install plug-in files manually.</p></font>')
+			document.writeln('<font color="#FFFFFF"><p align="center"><a href="http://www.adobe.com/svg/">Click here</a> for more information.</p></font>');
+			document.writeln('<font size="+2" color="#FFFFFF"><p align="center">If you have already installed the SVG Viewer 3.0 manually, <a color="red" href="svg_asv.svg">CONTINUE TO THE MAP</a>.</p></font>');
+		}
+	}
+}
+
+</script>
+<noscript>
+document.writeln('<h2 align="center"><font color="#FFFFFF">This program uses Javascript</font></h2>')
+</noscript>
+
+
+<h4 align="center"><font color="#FFFFFF"><a href="http://www.elzaresearch.com/landv/">(c) 
+  LandV, 2002</a></font></h4>
+
+
+</body>
+</html>

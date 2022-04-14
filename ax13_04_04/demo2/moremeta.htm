@@ -1,0 +1,50 @@
+<html>
+<head>
+<title>AxioMap 1.2: Demo2 Notes</title>
+<meta name="description" content="AxioMap - Application of XML for Interactive Online Mapping - is an affordable software suite for publishing and viewing interactive maps on the Web. AxioMap uses XML-based vector graphics (VML and SVG) to directly render vector coordinates in an XML-compliant browser (such as IE5). You can download a free version of AxioMap from this site, or contact us about the commercial version and related services.">
+<meta name="keywords" content="GIS, geographic information system, geography, interactive mapping, maps, Geographic Information Systems, research, data analysis, survey, software, modeling, simulation, VML, SVG, XML, vector markup, XSL, XSLT, Avenue, MapBasic, GIS training, applications development, online survey, survey software, map, clinical research, geodata, gis software, ArcView, ESRI,MapInfo, Microsoft, Internet Map Server, data mining.">
+</head>
+<body>
+
+<h2>
+<font color="#FF0000">
+Demo2: Agriculture Atlas of Michigan.</font></h2>
+<h3>This demo uses AxioMap 1.2, with extended set of features compared with the AxioMap 0.9 used in the first demo.
+In this version, you can map attributes from several
+datasets (possibly residing on different servers), compose variables from several datasets, analyze complex
+queries, etc. </h3>
+<h3><font color="#FF0000">Click the HELP button in the lower left corner of the map for detailed information about the capabilitis of the software. </font></h3>
+<h3>Here are some specific features of this demo:</h3>
+<b><font color="#FF0000">1. Mapping derived variables based on different datasets</font></b>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Click on an attribute in the left frame, and you
+will see a choropleth map of this attribute by Michigan counties in the right
+frame. You can bring in a different set of attributes by selecting it from a pull-down menu above the list of variables.
+Also, you can click &quot;Compose&quot;, and map a derived
+variable, as a result of some arithmetic operation on two input variables, possibly from different datasets.
+As before, you can change the number of intervals, and classification method -
+selecting these parameters under  &quot;Options&quot;.
+
+
+<p><b><font color="#FF0000">2. Composite queries</font></b>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Click the Query button, and the left
+frame will expand to show a query dialog. Here is an example of a funny
+query. Let's find counties which had pumpkin farms in 1992, however, land under
+pumpkins was zero. With the &quot;Agriculture&quot; dataset active, map the &quot;92
+Pumpkin Acres&quot; variable, and build a query
+<pre>[Current var] = 0 </pre>. With the
+&quot;New Set&quot; option, click Evaluate. Click Info, and find that 32
+counties are currently selected. Then, select the &quot;92 Pumpkin farms&quot;
+variable, and evaluate expression
+<pre>[Current var]  > 0</pre>, selecting from the set.
+Now, four counties are selected. Click &quot;Listing&quot; to display them as a
+table.&nbsp;&nbsp;&nbsp;
+
+<br><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+The agriculture data for this demo are from the 1992 Agriculture Census, the dataset was
+assembled by Kathleen Baker, Michigan State University.
+
+<h3><font color="#FF0000">You can download a free version of AxioMap (AxioMap 0.9) by clicking <a href="../ax09download.html">HERE.</a><br>
+Please contact us if you are interested in obtaining AxioMap 1.2</font></h3>
+
+</body>
+</html>

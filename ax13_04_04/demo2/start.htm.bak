@@ -1,0 +1,13 @@
+<HTML>
+<HEAD>
+   <TITLE>AxioMap 1.4</TITLE>
+</HEAD>
+
+<BODY>
+<table><tr><td>
+<embed width="200" height="450" src="pilat_form/form1.svg" name="menu">
+</td><td>
+<embed width="600" height="450" src="a_prep.svg" name="basemap">
+</td></tr></table>
+</body>
+</html>

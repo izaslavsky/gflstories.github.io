@@ -1,0 +1,147 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml">
+<head>
+<style>v\:* { behavior: url(#default#VML); }
+.title {left:0;top:0;text-align:center;color:#ffffff;font-weight:bold;font-size:16pt}
+
+</style>
+<title>AxioMap Pattern Selector</title>
+<script>
+var old_elem;
+var sel_elem_id;
+var sel_elem=null;
+var m = new Array(1);						
+
+function doInit()
+{
+  var messDoc = new ActiveXObject("microsoft.XMLDOM");
+  messDoc.validateOnParse = false;
+  messDoc.async=false;
+  if (messDoc.load("messa.xml")==false)
+  {
+  	alert("Error loading messages file."+c+"Your browser may not be set up for opening XML files." +c+c+"Contact your system administrator.");
+  	top.close();
+  	return false
+  }
+  else
+  {
+	var root = messDoc.documentElement;
+  	var listNodes = root.getElementsByTagName("m");
+	for (i=0;i<listNodes.length; i++)	m[i] = listNodes(i).text;
+  	window.status = "";
+  	init_con()
+  }
+}
+function init_con() 
+{
+  preload_patterns();
+  fullstring='';
+  numeric = 1;
+  for(i=0;i<8;i++) {
+  	for(j=0;j<6;j++) {
+  	fullstring+='<v:rect id=\"'+numeric+'\" style=\"position:absolute;left:'+(300*i)+';top:'+(200*j)+';width=260;height=150;cursor:hand\" fillcolor=\"#000000\" strokeweight=1><v:fill src=\"patterns\/pat'+numeric+'.gif\" type=\"pattern\" color2=\"#ffffff\"\/><\/v:rect>';
+  	numeric++
+  	}
+  }
+  fullstring+='<v:rect id=\"0\" style=\"position:absolute;left:0;top:1200;width=260;height=150;cursor:hand\" fillcolor=\"#ffffff\" strokeweight=1><\/v:rect>';
+  matrix.innerHTML = fullstring;
+  
+  if (window.dialogArguments != null)  
+			oldpattern= window.dialogArguments;
+	else
+			oldpattern = '';
+
+  old_elem = document.getElementById(oldpattern+'');
+  old_elem.strokeweight = 3;
+  old_elem.strokecolor = "blue"
+	 titl.innerText=m[4];
+	 b1.innerText = m[3];
+	 b2.innerText = m[1]
+}
+function preload_patterns()
+{
+fullstring ='<center><table border=0 cellpadding=10 cellspacing=10><tr><td valign=middle align=center>Please wait as patterns load...</td></tr></table></center>'
+matrix.innerHTML=fullstring
+
+var im = new Array(1)
+   for(i=1;i<49;i++) {
+	  im[i] = new Image();
+   	im[i].src = "patterns/pat"+i+".gif"
+   }
+}
+
+function doOK() 
+{
+	window.returnValue = sel_elem_id;
+	window.close()
+}
+function doCancel() 
+{
+	window.returnValue = '';
+	window.close()
+}
+function mover() 
+{
+ 	cur_elem = event.srcElement;
+  if ((cur_elem != old_elem) && (cur_elem != sel_elem)) 
+  {
+  	cur_elem.strokeweight=2;
+  	cur_elem.strokecolor="yellow"
+  }
+}
+function mout() 
+{
+  cur_elem = event.srcElement;
+  if ((cur_elem != old_elem) && (cur_elem != sel_elem)) 
+  {
+  	cur_elem.strokeweight=1;
+  	cur_elem.strokecolor="black"
+  }	
+}
+function selpat() 
+{
+  if(sel_elem) 
+  {
+  	old_sel_elem = document.getElementById(sel_elem_id);
+  	old_sel_elem.strokeweight=1;
+  	old_sel_elem.strokecolor="black"
+  }
+  sel_elem = event.srcElement;
+  sel_elem_id = sel_elem.id;
+ 	sel_elem.strokeweight=3;
+  sel_elem.strokecolor="red"
+}
+</SCRIPT>
+</HEAD>
+<BODY onload="doInit()"  bgcolor="#7098A0">
+<CENTER>
+<table  id=maintable border="2" rules="none" bgcolor="#7098A0" cellpadding="2" cellspacing="5" width="520" height="420" >
+    <tr>
+      <td valign="middle" align="center" height="10%" colspan="5" class=title><span id=titl></span>
+			<hr>
+      </td>
+    </tr>
+
+    <tr>  
+      <td valign="top" align="center" height="80%" colspan="5">
+
+
+<v:group id=matrix onclick="selpat()" onmouseover="mover()" onmouseout="mout()" style='position:relative;left:0pt;top:0pt; width:500pt;height:316pt' coordorigin="0,0" coordsize="3840,2400">
+</v:group>
+
+
+<hr>
+      </td>
+    </tr>
+
+		<tr>
+		<td></td>
+		<td valign="top" align="center"><BUTTON onclick="doOK()"><span id=b1></span></BUTTON></td>
+		<td></td>
+		<td valign="top" align="center"><BUTTON onclick="doCancel()"><span id=b2></span></BUTTON></td>
+		<td></td>
+		</tr>
+		</table>
+
+</CENTER>
+</BODY>
+</HTML>

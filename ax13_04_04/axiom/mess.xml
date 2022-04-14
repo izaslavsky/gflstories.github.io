@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ms>
+<m>Show the</m>
+<m>Hide the</m>
+<m>Display</m>
+<m>Select</m>
+<m>__none__</m>
+<m>Add to  (+)</m>
+<m>Subtract  (-)</m>
+<m>Multiply by  (*)</m>
+<m>Divide by (/)</m>
+<m>less than</m>
+<m>from</m>
+<m>to</m>
+<m>or greater</m>
+<m>Click to open URL.</m>
+<m>Additional Metadata</m>
+<m>Reposition the </m>
+<m>, and press left mouse button</m>
+<m>Legend</m>
+<m>Annotation</m>
+<m>UTM Zone</m>
+<m>lat</m>
+<m>lon</m>
+<m>Click on the map to pan or zoom</m>
+<m>All Selected</m>
+<m>None Selected</m>
+<m>Click on map objects to open URLs</m>
+<m>Click on the map to pan or zoom</m>
+<m>Cannot zoom that far in</m>
+<m>Cannot zoom that far out</m>
+<m>recenter and zoom out</m>
+<m>Add   :</m>
+<m>Reduce:</m>
+<m>Composite Selection</m>
+<m>Invalid formula.</m>
+<m>Select a varaible first, then evaluate a query</m>
+<m>Check the formula and evaluate it again.</m>
+<m>Here are examples of valid formulas:</m>
+<m>Second variable:</m>
+<m>[Current var] &gt;= 500</m>
+<m>[Current var] &lt;&gt; 1000</m>
+<m>Selection Information:</m>
+<m>Currently selected</m>
+<m>records.</m>
+<m>Query expression:</m>
+<m>No variable is currently active.</m>
+<m>Select a variable from the list,</m>
+<m>or compose it using the Compose button.</m>
+<m>Once a variable is mapped in the right frame, you can query it.</m>
+<m>The current variable is</m>
+<m>Minimum value is</m>
+<m>Maximum value is</m>
+<m>Range is</m>
+<m>Number of objects is</m>
+<m>Click on a variable name to map it in the right frame</m>
+<m>Map Navigation</m>
+<m>Select this option if you want to</m>
+<m> by clicking on the map</m>
+<m>recenter and zoom in</m>
+<m>recenter</m>
+<m>open URLs associated with map objects</m>
+<m>Return to the original map extent</m>
+<m>Initial View</m>
+<m>Open the Help window</m>
+<m>Help</m>
+<m>Edit</m>
+<m>Application of XML for Interactive Online Mapping</m>
+<m>AxioMap</m>
+<m>Current variable</m>
+<m>... click and enter value...</m>
+<m>... enter value now...</m>
+<m>Compose Variable</m>
+<m>Select an operation here, if you want to map a derived variable</m>
+<m>Operation:</m>
+<m>Toggle the LEGEND display on or off</m>
+<m>Select a second variable</m>
+<m>[Current var]</m>
+<m>Build Query</m>
+<m>Construct a query expression here, by clicking in an operation and typing a numeric value</m>
+<m>greater than or equal to</m>
+<m>equal to</m>
+<m>less than or equal to</m>
+<m>not equal to</m>
+<m>Display information about the current variable</m>
+<m>Info</m>
+<m>Evaluate the query and map the results</m>
+<m>Evaluate</m>
+<m>Reset the query expression window</m>
+<m>Clear</m>
+<m>New Set</m>
+<m>Add to Set</m>
+<m>Select from Set</m>
+<m>Select All</m>
+<m>Unselect All</m>
+<m>Listing</m>
+<m>List selected records</m>
+<m>Options</m>
+<m>Classification</m>
+<m>Equal Intervals</m>
+<m>Divide range of values into equal intervals</m>
+<m>Quantiles</m>
+<m>Group objects into groups of equal size</m>
+<m>Select number of intervals for thematic mapping</m>
+<m>Intervals</m>
+<m>Toggle the</m>
+<m>Toggle the ANNOTATION display on or off</m>
+<m>Toggle the display of area LABELS on or off</m>
+<m>Labels</m>
+<m>Set the zooming level</m>
+<m>Zoom level</m>
+<m>Circle (ALT-click)</m>
+<m>100 ft,200 ft,300 ft,500 ft,750 ft,1000 ft,1/4 mi,1/2 mi,3/4 mi,1 mi,2 mi,3 mi,5 mi,7.5 mi,10 mi,15 mi,20 mi,30 mi,50 mi,100 mi</m>
+<m>red,maroon,purple,blue,navy,aqua,black,silver,white,green,lime,olive,yellow</m>
+<m>layer display on or off</m>
+<m>Expand or collapse the</m>
+<m>category</m>
+<m>Open table of</m>
+<m>dialog</m>
+<m>Loading</m>
+<m>Map Project</m>
+<m>. Please Wait...</m>
+<m>Error opening</m>
+<m>XML file</m>
+<m>Background</m>
+<m>Outline</m>
+<m>Line</m>
+<m>Polygon</m>
+<m>Point</m>
+<m>Thematic</m>
+<m>Attribute Data</m>
+<m>Messages</m>
+<m>Layer</m>
+<m>NAME</m>
+<m>Selected Records</m>
+<m>Select a Dataset</m>
+<m>Specify the radius of a circle</m>
+<m>Select a circle color</m>
+<m>100,200,300,500,750,1000,1320,2640,3960,5280,10560,15840,26400,39600,52800,79200,105600,158400,264000,528000</m>
+<m>0 or missing data</m>
+<m>Axiomap: Selected Records</m>
+<m>Axiomap: List of records for point layer</m>
+<m>Name</m>
+<m>Compose</m>
+<m>Query</m>
+<m>Options</m>
+<m>zoom</m>
+<m>x</m>
+<m>pan</m>
+<m>IN</m>
+<m>OUT</m>
+<m>open URL</m>
+<m>in grayscale</m>
+<m>Switch between color and grayscale thematic map</m>
+<m>Variable not saved</m>
+<m>This is not a derived variable, no need to save</m>
+<m>&lt;&lt;Saved Variables&gt;&gt;</m>
+<m>Save the current variable into the &lt;&lt;Saved Variables&gt;&gt; dataset</m>
+<m>Save Variable</m>
+<m>Close Window</m>
+<m>Print</m>
+<m>Open Print Layout</m>
+<m>Hello, and welcome to our map. Please wait as the map loads. Then simply point with your mouse onto map elements or controls.</m>
+<m>Toggle the SPEAKING on or off</m>
+<m>Speaking</m>
+<m>this is #163</m>
+</ms>

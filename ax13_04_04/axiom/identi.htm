@@ -1,0 +1,26 @@
+<html>
+<head>
+<script>
+pointall = ""
+var a_pdata = new Array(1) 
+function doInit() {
+    if (window.dialogArguments != null)  
+			pointall = window.dialogArguments;
+	 else
+			pointall = ''
+    a_pdata=pointall.split("~")
+
+    s2w = "<h3>"+a_pdata[0]+"</h3>"
+    ptitle.innerHTML = s2w
+    pdata.innerHTML = a_pdata[1]
+}
+</SCRIPT>
+</HEAD>
+<BODY onload="doInit()"  bgcolor="#7098A0">
+<CENTER>
+<DIV ID=ptitle style="width:240"></DIV>
+<DIV id=pdata style="width:240"></DIV><br>
+<BUTTON onclick="window.close()">Close</BUTTON>
+</CENTER>
+</BODY>
+</HTML>

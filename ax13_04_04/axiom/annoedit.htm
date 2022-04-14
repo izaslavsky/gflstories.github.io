@@ -1,0 +1,57 @@
+<html>
+<head>
+<script>
+text2edit = "";
+var m = new Array(1);						
+function init_con() {
+    if (window.dialogArguments != null)  
+			text2edit = window.dialogArguments;
+	 else
+			text2edit = '';
+    s2w = "<textarea  id=atext  rows=\"8\" wrap=\"soft\" style=\"width:450;height:160\">"+text2edit+"<\/TEXTAREA>";
+    anno.innerHTML = s2w;
+	 anno.focus();    
+	 titl.innerText=m[2];
+	 b1.innerText = m[0];
+	 b2.innerText = m[1]
+}
+function doOK() {
+	
+    window.returnValue = atext.value;
+    window.close()
+}
+function doCancel() {
+    window.returnValue = text2edit;
+    window.close()
+}
+function doInit()
+{
+  var messDoc = new ActiveXObject("microsoft.XMLDOM");
+  messDoc.validateOnParse = false;
+  messDoc.async=false;
+  if (messDoc.load("messa.xml")==false)
+  {
+  	alert("Error loading messages file."+c+"Your browser may not be set up for opening XML files." +c+c+"Contact your system administrator.");
+  	top.close();
+  	return false
+  }
+  else
+  {
+	var root = messDoc.documentElement;
+  	var listNodes = root.getElementsByTagName("m");
+	for (i=0;i<listNodes.length; i++)	m[i] = listNodes(i).text;
+  	window.status = "";
+  	init_con()
+  }
+}
+</SCRIPT>
+</HEAD>
+<BODY onload="doInit()"  bgcolor="#7098A0">
+<CENTER>
+<h2><font color="#ffffff"><div id=titl></div></font></h2>
+<DIV id=anno></DIV><br>
+<BUTTON onclick="doOK()"><div id=b1></div></BUTTON>&nbsp;&nbsp;
+<BUTTON onclick="doCancel()"><div id=b2></div></BUTTON>
+</CENTER>
+</BODY>
+</HTML>

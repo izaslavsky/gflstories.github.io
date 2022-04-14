@@ -1,0 +1,42 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"><head><title>Application of XML for Interactive Online Mapping: AxioMap</title>
+<style>
+v\:* {behavior:url(#default#VML);} </style>
+<script>
+function preload() {
+image1 = new Image();
+image1.src = "icons/earthani.gif";
+image2 = new Image();
+image2.src = "icons/axbiglogo.gif";
+}
+</script>
+</head><body onload="preload()">
+
+<v:shape id="axiomage" style='position:absolute;  left:52pt;top:70pt;width:194.375pt;height:119.75pt'>
+  <v:imagedata src="icons/axbiglogo.gif"/> </v:shape>
+
+ <v:oval id="oval" style='position:absolute;left:34pt;top:58pt; width:228pt;height:2in;' filled="f"  fillcolor="#f30" strokecolor="#c06" strokeweight="6pt">  <v:stroke dashstyle="1 1" endcap="round"/>
+ <v:shadow color="gray [2]"/> </v:oval>
+
+ <v:arc id="ball" style='position:absolute;left:34pt;top:58pt; width:228pt;height:2in' filled="f" strokecolor="white" strokeweight="10pt"> <v:stroke dashstyle="dot" endcap="round"/> </v:arc>
+
+ <v:arc id="earth" style='position:absolute;left:34pt;top:58pt; width:228pt;height:2in' filled="f" strokecolor="red" strokeweight="23pt"> <v:stroke filltype="frame" src="icons/earthani.gif" dashstyle="dot" endcap="round"/> </v:arc>
+
+ <div style='text-align:center;position:absolute;top:220pt;left:34pt; width:228pt;height:40pt'><span style='font-family:Arial;font-size:100%;color:blue'><b><i>PLEASE  WAIT<br>THE  MAP IS LOADING…<br><br></i></b></span>
+
+<span style='font-family:Arial;font-size:75%'><b>Click REFRESH if the map doesn't appear, <br>or consult <a href="help.htm" target="_blank"> HELP</a> in case of errors</b></span></div>
+<script language="Javascript1.2">
+var cntr=15;
+ball.startangle = 0
+ball.endangle = 1
+earth.startangle = 33
+earth.endangle = 34
+main();
+function main()
+{ cntr+=1;
+  if (cntr == 180) cntr = 8
+  ball.startangle = 2*cntr
+  ball.endangle = ball.startangle+1
+  ball.strokecolor="white"
+  setTimeout("main()",1);
+}
+</script></body></html>
